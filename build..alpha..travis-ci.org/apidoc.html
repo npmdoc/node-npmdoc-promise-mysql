@@ -1,0 +1,1307 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/lukeb-uk/node-promise-mysql#readme"
+
+    >promise-mysql (v3.0.1)</a>
+</h1>
+<h4>A bluebird wrapper for node-mysql</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.promise-mysql">module promise-mysql</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.connection">
+            function <span class="apidocSignatureSpan">promise-mysql.</span>connection
+            <span class="apidocSignatureSpan">(config, _connection)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.createConnection">
+            function <span class="apidocSignatureSpan">promise-mysql.</span>createConnection
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.createPool">
+            function <span class="apidocSignatureSpan">promise-mysql.</span>createPool
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.escape">
+            function <span class="apidocSignatureSpan">promise-mysql.</span>escape
+            <span class="apidocSignatureSpan">(value, stringifyObjects, timeZone)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.escapeId">
+            function <span class="apidocSignatureSpan">promise-mysql.</span>escapeId
+            <span class="apidocSignatureSpan">(value, forbidQualified)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.format">
+            function <span class="apidocSignatureSpan">promise-mysql.</span>format
+            <span class="apidocSignatureSpan">(sql, values, stringifyObjects, timeZone)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.pool">
+            function <span class="apidocSignatureSpan">promise-mysql.</span>pool
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">promise-mysql.</span>Types</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">promise-mysql.</span>connection.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">promise-mysql.</span>helper</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">promise-mysql.</span>pool.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.promise-mysql.connection">module promise-mysql.connection</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.connection.connection">
+            function <span class="apidocSignatureSpan">promise-mysql.</span>connection
+            <span class="apidocSignatureSpan">(config, _connection)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.promise-mysql.connection.prototype">module promise-mysql.connection.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.connection.prototype.beginTransaction">
+            function <span class="apidocSignatureSpan">promise-mysql.connection.prototype.</span>beginTransaction
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.connection.prototype.changeUser">
+            function <span class="apidocSignatureSpan">promise-mysql.connection.prototype.</span>changeUser
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.connection.prototype.commit">
+            function <span class="apidocSignatureSpan">promise-mysql.connection.prototype.</span>commit
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.connection.prototype.destroy">
+            function <span class="apidocSignatureSpan">promise-mysql.connection.prototype.</span>destroy
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.connection.prototype.end">
+            function <span class="apidocSignatureSpan">promise-mysql.connection.prototype.</span>end
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.connection.prototype.escape">
+            function <span class="apidocSignatureSpan">promise-mysql.connection.prototype.</span>escape
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.connection.prototype.escapeId">
+            function <span class="apidocSignatureSpan">promise-mysql.connection.prototype.</span>escapeId
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.connection.prototype.format">
+            function <span class="apidocSignatureSpan">promise-mysql.connection.prototype.</span>format
+            <span class="apidocSignatureSpan">(sql, values)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.connection.prototype.pause">
+            function <span class="apidocSignatureSpan">promise-mysql.connection.prototype.</span>pause
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.connection.prototype.ping">
+            function <span class="apidocSignatureSpan">promise-mysql.connection.prototype.</span>ping
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.connection.prototype.query">
+            function <span class="apidocSignatureSpan">promise-mysql.connection.prototype.</span>query
+            <span class="apidocSignatureSpan">(sql, values)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.connection.prototype.resume">
+            function <span class="apidocSignatureSpan">promise-mysql.connection.prototype.</span>resume
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.connection.prototype.rollback">
+            function <span class="apidocSignatureSpan">promise-mysql.connection.prototype.</span>rollback
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.connection.prototype.statistics">
+            function <span class="apidocSignatureSpan">promise-mysql.connection.prototype.</span>statistics
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.promise-mysql.helper">module promise-mysql.helper</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.helper.promiseCallback">
+            function <span class="apidocSignatureSpan">promise-mysql.helper.</span>promiseCallback
+            <span class="apidocSignatureSpan">(functionName, params)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.promise-mysql.pool">module promise-mysql.pool</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.pool.pool">
+            function <span class="apidocSignatureSpan">promise-mysql.</span>pool
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.promise-mysql.pool.prototype">module promise-mysql.pool.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.pool.prototype.end">
+            function <span class="apidocSignatureSpan">promise-mysql.pool.prototype.</span>end
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.pool.prototype.escape">
+            function <span class="apidocSignatureSpan">promise-mysql.pool.prototype.</span>escape
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.pool.prototype.escapeId">
+            function <span class="apidocSignatureSpan">promise-mysql.pool.prototype.</span>escapeId
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.pool.prototype.getConnection">
+            function <span class="apidocSignatureSpan">promise-mysql.pool.prototype.</span>getConnection
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.pool.prototype.on">
+            function <span class="apidocSignatureSpan">promise-mysql.pool.prototype.</span>on
+            <span class="apidocSignatureSpan">(event, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.pool.prototype.query">
+            function <span class="apidocSignatureSpan">promise-mysql.pool.prototype.</span>query
+            <span class="apidocSignatureSpan">(sql, values)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.promise-mysql.pool.prototype.releaseConnection">
+            function <span class="apidocSignatureSpan">promise-mysql.pool.prototype.</span>releaseConnection
+            <span class="apidocSignatureSpan">(connection)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.promise-mysql" id="apidoc.module.promise-mysql">module promise-mysql</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.connection" id="apidoc.element.promise-mysql.connection">
+        function <span class="apidocSignatureSpan">promise-mysql.</span>connection
+        <span class="apidocSignatureSpan">(config, _connection)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">connection = function (config, _connection){
+    var self = this,
+        connect = function(resolve, reject) {
+            if (_connection) {
+                self.connection = _connection;
+                resolve();
+            } else {
+                self.connection = mysql.createConnection(self.config);
+                self.connection.connect(
+                    function(err){
+                        if (err) {
+                            self.connection.err = err;
+                            if (typeof reject === &#x27;function&#x27;) {
+                                return reject(err);
+                            } else {
+                                setTimeout(function(){
+                                    connect();
+                                }, 2000);
+                                return;
+                            }
+                        } else {
+                            delete self.connection.err;
+                            if (typeof resolve === &#x27;function&#x27;) {
+                                return resolve();
+                            }
+                        }
+                    }
+                );
+
+                self.connection.on(&#x27;error&#x27;, function(err) {
+                    console.log(&#x27;db error&#x27;, err);
+                    self.connection.err = err;
+                    if(err.code === &#x27;PROTOCOL_CONNECTION_LOST&#x27; || err.code === &#x27;ECONNRESET&#x27; || err.code === &#x27;PROTOCOL_ENQUEUE_AFTER_FATAL_ERROR
+&#x27;) {
+                        connect();
+                    }
+                });
+            }
+        };
+
+    this.config = config;
+
+    return new Promise(function(resolve, reject) {
+        connect(
+            function(){
+                return resolve(self);
+            },
+            function(err){
+                return reject(err);
+            }
+        );
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.createConnection" id="apidoc.element.promise-mysql.createConnection">
+        function <span class="apidocSignatureSpan">promise-mysql.</span>createConnection
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createConnection = function (config){
+    return new Connection(config);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```bash
+$ npm install promise-mysql
+```
+
+Please refer to [mysqljs/mysql](https://github.com/mysqljs/mysql) for documentation on how to use the mysql functions and refer
+to [Bluebird](https://github.com/petkaantonov/bluebird/) for documentation on Bluebird&#x27;s promises
+
+At the minute only the standard connection (using `.<span class="apidocCodeKeywordSpan">createConnection</span>()`) and the pool
+ (using `.createPool()`) is supported. `createPoolCluster` is not implemented yet.
+
+## Examples
+
+### Connection
+
+To connect, you simply call `.createConnection()` like you would on mysqljs/mysql:
+```javascript
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.createPool" id="apidoc.element.promise-mysql.createPool">
+        function <span class="apidocSignatureSpan">promise-mysql.</span>createPool
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createPool = function (config){
+    return new Pool(config);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+```bash
+$ npm install promise-mysql
+```
+
+Please refer to [mysqljs/mysql](https://github.com/mysqljs/mysql) for documentation on how to use the mysql functions and refer
+to [Bluebird](https://github.com/petkaantonov/bluebird/) for documentation on Bluebird&#x27;s promises
+
+At the minute only the standard connection (using `.createConnection()`) and the pool (using `.<span class="apidocCodeKeywordSpan
+">createPool</span>()`) is supported. `createPoolCluster` is not implemented yet.
+
+## Examples
+
+### Connection
+
+To connect, you simply call `.createConnection()` like you would on mysqljs/mysql:
+```javascript
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.escape" id="apidoc.element.promise-mysql.escape">
+        function <span class="apidocSignatureSpan">promise-mysql.</span>escape
+        <span class="apidocSignatureSpan">(value, stringifyObjects, timeZone)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function escape(value, stringifyObjects, timeZone) {
+  var SqlString = loadClass(&#x27;SqlString&#x27;);
+
+  return SqlString.escape(value, stringifyObjects, timeZone);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+connection.prototype.resume = function() {
+    this.connection.resume();
+};
+
+connection.prototype.escape = function(value) {
+    return this.connection.<span class="apidocCodeKeywordSpan">escape</span>(value);
+};
+
+connection.prototype.escapeId = function(value) {
+    return this.connection.escapeId(value);
+};
+
+connection.prototype.format = function(sql, values) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.escapeId" id="apidoc.element.promise-mysql.escapeId">
+        function <span class="apidocSignatureSpan">promise-mysql.</span>escapeId
+        <span class="apidocSignatureSpan">(value, forbidQualified)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function escapeId(value, forbidQualified) {
+  var SqlString = loadClass(&#x27;SqlString&#x27;);
+
+  return SqlString.escapeId(value, forbidQualified);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+connection.prototype.escape = function(value) {
+    return this.connection.escape(value);
+};
+
+connection.prototype.escapeId = function(value) {
+    return this.connection.<span class="apidocCodeKeywordSpan">escapeId</span>(value);
+};
+
+connection.prototype.format = function(sql, values) {
+    return this.connection.format(sql, values);
+};
+
+module.exports = connection;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.format" id="apidoc.element.promise-mysql.format">
+        function <span class="apidocSignatureSpan">promise-mysql.</span>format
+        <span class="apidocSignatureSpan">(sql, values, stringifyObjects, timeZone)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function format(sql, values, stringifyObjects, timeZone) {
+  var SqlString = loadClass(&#x27;SqlString&#x27;);
+
+  return SqlString.format(sql, values, stringifyObjects, timeZone);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+connection.prototype.escapeId = function(value) {
+    return this.connection.escapeId(value);
+};
+
+connection.prototype.format = function(sql, values) {
+    return this.connection.<span class="apidocCodeKeywordSpan">format</span>(sql, values);
+};
+
+module.exports = connection;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.pool" id="apidoc.element.promise-mysql.pool">
+        function <span class="apidocSignatureSpan">promise-mysql.</span>pool
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pool = function (config) {
+    this.pool = mysql.createPool(config);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.promise-mysql.connection" id="apidoc.module.promise-mysql.connection">module promise-mysql.connection</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.connection.connection" id="apidoc.element.promise-mysql.connection.connection">
+        function <span class="apidocSignatureSpan">promise-mysql.</span>connection
+        <span class="apidocSignatureSpan">(config, _connection)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">connection = function (config, _connection){
+    var self = this,
+        connect = function(resolve, reject) {
+            if (_connection) {
+                self.connection = _connection;
+                resolve();
+            } else {
+                self.connection = mysql.createConnection(self.config);
+                self.connection.connect(
+                    function(err){
+                        if (err) {
+                            self.connection.err = err;
+                            if (typeof reject === &#x27;function&#x27;) {
+                                return reject(err);
+                            } else {
+                                setTimeout(function(){
+                                    connect();
+                                }, 2000);
+                                return;
+                            }
+                        } else {
+                            delete self.connection.err;
+                            if (typeof resolve === &#x27;function&#x27;) {
+                                return resolve();
+                            }
+                        }
+                    }
+                );
+
+                self.connection.on(&#x27;error&#x27;, function(err) {
+                    console.log(&#x27;db error&#x27;, err);
+                    self.connection.err = err;
+                    if(err.code === &#x27;PROTOCOL_CONNECTION_LOST&#x27; || err.code === &#x27;ECONNRESET&#x27; || err.code === &#x27;PROTOCOL_ENQUEUE_AFTER_FATAL_ERROR
+&#x27;) {
+                        connect();
+                    }
+                });
+            }
+        };
+
+    this.config = config;
+
+    return new Promise(function(resolve, reject) {
+        connect(
+            function(){
+                return resolve(self);
+            },
+            function(err){
+                return reject(err);
+            }
+        );
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.promise-mysql.connection.prototype" id="apidoc.module.promise-mysql.connection.prototype">module promise-mysql.connection.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.connection.prototype.beginTransaction" id="apidoc.element.promise-mysql.connection.prototype.beginTransaction">
+        function <span class="apidocSignatureSpan">promise-mysql.connection.prototype.</span>beginTransaction
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">beginTransaction = function () {
+    return promiseCallback.apply(this.connection, [&#x27;beginTransaction&#x27;, arguments]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.connection.prototype.changeUser" id="apidoc.element.promise-mysql.connection.prototype.changeUser">
+        function <span class="apidocSignatureSpan">promise-mysql.connection.prototype.</span>changeUser
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">changeUser = function (data) {
+    return promiseCallback.apply(this.connection, [&#x27;changeUser&#x27;, arguments]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.connection.prototype.commit" id="apidoc.element.promise-mysql.connection.prototype.commit">
+        function <span class="apidocSignatureSpan">promise-mysql.connection.prototype.</span>commit
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">commit = function () {
+    return promiseCallback.apply(this.connection, [&#x27;commit&#x27;, arguments]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.connection.prototype.destroy" id="apidoc.element.promise-mysql.connection.prototype.destroy">
+        function <span class="apidocSignatureSpan">promise-mysql.connection.prototype.</span>destroy
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">destroy = function () {
+    this.connection.destroy();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+connection.prototype.end = function(data) {
+    return promiseCallback.apply(this.connection, [&#x27;end&#x27;, arguments]);
+};
+
+connection.prototype.destroy = function() {
+    this.connection.<span class="apidocCodeKeywordSpan">destroy</span>();
+};
+
+connection.prototype.pause = function() {
+    this.connection.pause();
+};
+
+connection.prototype.resume = function() {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.connection.prototype.end" id="apidoc.element.promise-mysql.connection.prototype.end">
+        function <span class="apidocSignatureSpan">promise-mysql.connection.prototype.</span>end
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">end = function (data) {
+    return promiseCallback.apply(this.connection, [&#x27;end&#x27;, arguments]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.connection.prototype.escape" id="apidoc.element.promise-mysql.connection.prototype.escape">
+        function <span class="apidocSignatureSpan">promise-mysql.connection.prototype.</span>escape
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">escape = function (value) {
+    return this.connection.escape(value);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+connection.prototype.resume = function() {
+    this.connection.resume();
+};
+
+connection.prototype.escape = function(value) {
+    return this.connection.<span class="apidocCodeKeywordSpan">escape</span>(value);
+};
+
+connection.prototype.escapeId = function(value) {
+    return this.connection.escapeId(value);
+};
+
+connection.prototype.format = function(sql, values) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.connection.prototype.escapeId" id="apidoc.element.promise-mysql.connection.prototype.escapeId">
+        function <span class="apidocSignatureSpan">promise-mysql.connection.prototype.</span>escapeId
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">escapeId = function (value) {
+    return this.connection.escapeId(value);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+connection.prototype.escape = function(value) {
+    return this.connection.escape(value);
+};
+
+connection.prototype.escapeId = function(value) {
+    return this.connection.<span class="apidocCodeKeywordSpan">escapeId</span>(value);
+};
+
+connection.prototype.format = function(sql, values) {
+    return this.connection.format(sql, values);
+};
+
+module.exports = connection;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.connection.prototype.format" id="apidoc.element.promise-mysql.connection.prototype.format">
+        function <span class="apidocSignatureSpan">promise-mysql.connection.prototype.</span>format
+        <span class="apidocSignatureSpan">(sql, values)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">format = function (sql, values) {
+    return this.connection.format(sql, values);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+connection.prototype.escapeId = function(value) {
+    return this.connection.escapeId(value);
+};
+
+connection.prototype.format = function(sql, values) {
+    return this.connection.<span class="apidocCodeKeywordSpan">format</span>(sql, values);
+};
+
+module.exports = connection;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.connection.prototype.pause" id="apidoc.element.promise-mysql.connection.prototype.pause">
+        function <span class="apidocSignatureSpan">promise-mysql.connection.prototype.</span>pause
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pause = function () {
+    this.connection.pause();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+connection.prototype.destroy = function() {
+    this.connection.destroy();
+};
+
+connection.prototype.pause = function() {
+    this.connection.<span class="apidocCodeKeywordSpan">pause</span>();
+};
+
+connection.prototype.resume = function() {
+    this.connection.resume();
+};
+
+connection.prototype.escape = function(value) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.connection.prototype.ping" id="apidoc.element.promise-mysql.connection.prototype.ping">
+        function <span class="apidocSignatureSpan">promise-mysql.connection.prototype.</span>ping
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ping = function (data) {
+    return promiseCallback.apply(this.connection, [&#x27;ping&#x27;, arguments]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.connection.prototype.query" id="apidoc.element.promise-mysql.connection.prototype.query">
+        function <span class="apidocSignatureSpan">promise-mysql.connection.prototype.</span>query
+        <span class="apidocSignatureSpan">(sql, values)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">query = function (sql, values) {
+    return promiseCallback.apply(this.connection, [&#x27;query&#x27;, arguments]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    host: &#x27;localhost&#x27;,
+    user: &#x27;sauron&#x27;,
+    password: &#x27;theonetruering&#x27;,
+    database: &#x27;mordor&#x27;
+}).then(function(conn){
+    connection = conn;
+
+    return connection.<span class="apidocCodeKeywordSpan">query</span>(&#x27;select `name` from hobbits&#x27;);
+}).then(function(rows){
+    // Logs out a list of hobbits
+    console.log(rows);
+});
+```
+
+You can even chain the promises, using a return within the .then():
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.connection.prototype.resume" id="apidoc.element.promise-mysql.connection.prototype.resume">
+        function <span class="apidocSignatureSpan">promise-mysql.connection.prototype.</span>resume
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resume = function () {
+    this.connection.resume();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+connection.prototype.pause = function() {
+    this.connection.pause();
+};
+
+connection.prototype.resume = function() {
+    this.connection.<span class="apidocCodeKeywordSpan">resume</span>();
+};
+
+connection.prototype.escape = function(value) {
+    return this.connection.escape(value);
+};
+
+connection.prototype.escapeId = function(value) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.connection.prototype.rollback" id="apidoc.element.promise-mysql.connection.prototype.rollback">
+        function <span class="apidocSignatureSpan">promise-mysql.connection.prototype.</span>rollback
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">rollback = function () {
+    return promiseCallback.apply(this.connection, [&#x27;rollback&#x27;, arguments]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.connection.prototype.statistics" id="apidoc.element.promise-mysql.connection.prototype.statistics">
+        function <span class="apidocSignatureSpan">promise-mysql.connection.prototype.</span>statistics
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">statistics = function (data) {
+    return promiseCallback.apply(this.connection, [&#x27;statistics&#x27;, arguments]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.promise-mysql.helper" id="apidoc.module.promise-mysql.helper">module promise-mysql.helper</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.helper.promiseCallback" id="apidoc.element.promise-mysql.helper.promiseCallback">
+        function <span class="apidocSignatureSpan">promise-mysql.helper.</span>promiseCallback
+        <span class="apidocSignatureSpan">(functionName, params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">promiseCallback = function (functionName, params) {
+  var self = this;
+  params = Array.prototype.slice.call(params, 0);
+  return new Promise(function(resolve, reject) {
+    params.push(function(err) {
+      var args = Array.prototype.slice.call(arguments, 1);
+      if (err) {
+        return reject(err);
+      }
+
+      return resolve.apply(this, args);
+    });
+
+    self[functionName].apply(self, params);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.promise-mysql.pool" id="apidoc.module.promise-mysql.pool">module promise-mysql.pool</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.pool.pool" id="apidoc.element.promise-mysql.pool.pool">
+        function <span class="apidocSignatureSpan">promise-mysql.</span>pool
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">pool = function (config) {
+    this.pool = mysql.createPool(config);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.promise-mysql.pool.prototype" id="apidoc.module.promise-mysql.pool.prototype">module promise-mysql.pool.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.pool.prototype.end" id="apidoc.element.promise-mysql.pool.prototype.end">
+        function <span class="apidocSignatureSpan">promise-mysql.pool.prototype.</span>end
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">end = function (data) {
+    return promiseCallback.apply(this.pool, [&#x27;end&#x27;, arguments]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.pool.prototype.escape" id="apidoc.element.promise-mysql.pool.prototype.escape">
+        function <span class="apidocSignatureSpan">promise-mysql.pool.prototype.</span>escape
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">escape = function (value) {
+    return this.pool.escape(value);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+connection.prototype.resume = function() {
+    this.connection.resume();
+};
+
+connection.prototype.escape = function(value) {
+    return this.connection.<span class="apidocCodeKeywordSpan">escape</span>(value);
+};
+
+connection.prototype.escapeId = function(value) {
+    return this.connection.escapeId(value);
+};
+
+connection.prototype.format = function(sql, values) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.pool.prototype.escapeId" id="apidoc.element.promise-mysql.pool.prototype.escapeId">
+        function <span class="apidocSignatureSpan">promise-mysql.pool.prototype.</span>escapeId
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">escapeId = function (value) {
+    return this.pool.escapeId(value);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+};
+
+connection.prototype.escape = function(value) {
+    return this.connection.escape(value);
+};
+
+connection.prototype.escapeId = function(value) {
+    return this.connection.<span class="apidocCodeKeywordSpan">escapeId</span>(value);
+};
+
+connection.prototype.format = function(sql, values) {
+    return this.connection.format(sql, values);
+};
+
+module.exports = connection;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.pool.prototype.getConnection" id="apidoc.element.promise-mysql.pool.prototype.getConnection">
+        function <span class="apidocSignatureSpan">promise-mysql.pool.prototype.</span>getConnection
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getConnection() {
+    return promiseCallback.apply(this.pool, [&#x27;getConnection&#x27;, arguments])
+    .then(function(con) {
+        return new Connection(null, con);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+
+```
+
+Get a connection from the pool:
+
+```javascript
+pool.<span class="apidocCodeKeywordSpan">getConnection</span>().then(function(connection) {
+    connection.query(&#x27;select `name` from hobbits&#x27;).then(...)
+}).catch(function(err) {
+    done(err);
+});
+```
+
+#### Using/Disposer Pattern with Pool
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.pool.prototype.on" id="apidoc.element.promise-mysql.pool.prototype.on">
+        function <span class="apidocSignatureSpan">promise-mysql.pool.prototype.</span>on
+        <span class="apidocSignatureSpan">(event, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">on = function (event, fn) {
+    this.pool.on(event, fn);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+                if (typeof resolve === &#x27;function&#x27;) {
+                    return resolve();
+                }
+            }
+        }
+    );
+
+    self.connection.<span class="apidocCodeKeywordSpan">on</span>(&#x27;error&#x27;, function(err) {
+        console.log(&#x27;db error&#x27;, err);
+        self.connection.err = err;
+        if(err.code === &#x27;PROTOCOL_CONNECTION_LOST&#x27; || err.code === &#x27;ECONNRESET&#x27; || err.code === &#x27;PROTOCOL_ENQUEUE_AFTER_FATAL_ERROR
+&#x27;) {
+            connect();
+        }
+    });
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.pool.prototype.query" id="apidoc.element.promise-mysql.pool.prototype.query">
+        function <span class="apidocSignatureSpan">promise-mysql.pool.prototype.</span>query
+        <span class="apidocSignatureSpan">(sql, values)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">query = function (sql, values) {
+    return promiseCallback.apply(this.pool, [&#x27;query&#x27;, arguments]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    host: &#x27;localhost&#x27;,
+    user: &#x27;sauron&#x27;,
+    password: &#x27;theonetruering&#x27;,
+    database: &#x27;mordor&#x27;
+}).then(function(conn){
+    connection = conn;
+
+    return connection.<span class="apidocCodeKeywordSpan">query</span>(&#x27;select `name` from hobbits&#x27;);
+}).then(function(rows){
+    // Logs out a list of hobbits
+    console.log(rows);
+});
+```
+
+You can even chain the promises, using a return within the .then():
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.promise-mysql.pool.prototype.releaseConnection" id="apidoc.element.promise-mysql.pool.prototype.releaseConnection">
+        function <span class="apidocSignatureSpan">promise-mysql.pool.prototype.</span>releaseConnection
+        <span class="apidocSignatureSpan">(connection)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function releaseConnection(connection) {
+    //Use the underlying connection from the mysql-module here:
+    return this.pool.releaseConnection(connection.connection);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  password: &#x27;theonetruering&#x27;,
+  database: &#x27;mordor&#x27;,
+  connectionLimit: 10
+});
+
+function getSqlConnection() {
+  return pool.getConnection().disposer(function(connection) {
+    pool.<span class="apidocCodeKeywordSpan">releaseConnection</span>(connection);
+  });
+}
+
+module.exports = getSqlConnection;
+```
+
+sqlQuery.js:
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
